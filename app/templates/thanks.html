@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="thanks-div">
+    <h3>Thank you for contacting me! I will answer you as soon as possible in a meanwhile have a nice day!</h3>
+    <h5>Would you like to go to main page?</h5>
+    <input type="button" value="Main Page" onclick="{{ url_for('index')}}">
+</div>
+{% endblock %}

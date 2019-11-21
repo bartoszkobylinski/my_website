@@ -1,0 +1,157 @@
+body{
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+/* navigation bar */
+.navigation_bar{
+    display: block;
+    width: 100vw;
+    height: 3vh;
+}
+.navigation_bar ul{
+    padding: 20px;
+    margin: 0px;
+    text-align: center;
+    background-color:#333;
+}
+.navigation_bar ul li{
+    display: inline-block;
+    width: 150px;
+    font-size: 16px;
+    border-left: 1px solid #bbb;
+    text-align: center;
+    color: white;
+}
+.navigation_bar ul li:first-child{
+border-left: none;
+}
+.navigation_bar ul li a{
+    text-decoration: none;
+    color: #eee;
+}
+.navigation_bar ul li i{
+    font-size: 16px;
+}
+
+
+/* about me */
+
+.main_content{
+    margin: 30px;
+    padding: 30px;
+    text-align: center;
+}
+.about_me{
+    display: inline-block;
+    text-align: justify;
+    width: 600px;
+    height: 400px;
+}
+
+/* Index page */
+
+.header-text{
+    margin-top: 50px
+}
+.header-text h3{
+    text-align: center;
+    padding-top: 20px;
+    color: #003366;
+}
+.header-text p{
+    padding: 20px;
+    text-align: center;
+}
+.main_content__index{
+    margin: 0;
+    padding: 0;
+}
+.first-project, .second-project, .third-project{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
+
+.first-project__content-img, .third-project__content-img{
+    order: 1;
+    width: auto;
+}
+
+.second-project__content-img{
+    order: 2;
+    width: auto;
+}
+.first-project__content, .third-project__content{
+    order: 2;
+    margin: 100px;
+    text-align: center;
+}
+
+.second-project__content{
+    order: 1;
+    margin: 100px;
+    text-align: center;
+}
+.first-project__content h3, .second-project__content h3, .third-project__content h3{
+    color: #003366;
+}
+/* contact form */
+.contact-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.contact-form{
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    margin-left: 150px;
+    margin-top: 100px;
+    width: 600px;
+}
+.h1-contact{
+    margin-top: 100px;
+    color: #003366;
+}
+.contact-info{
+    order: 2;
+    margin-top: 100px;
+    padding: 20px;
+    padding-top: 200px;
+}
+
+.form-name_label, .form-email_label, .form-message_label{
+    font-size: 1em;
+    padding:10px;
+}
+
+.form-submit{
+    margin: 25px;
+    width: 50px;
+    background-color: #333;
+    font-size: 1em bold;
+    border: 2px solid #000;
+    border-radius: 10px;
+    color:#ddd;
+}
+.input-form{
+    border: none;
+    width: 400px;
+    background-color: #ddd;
+}
+.input-form_message{
+    border: none;
+    width: 400px;
+    background-color: #ddd;
+    height: 100px;
+}
+/* thanks */
+
+.thanks-div{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

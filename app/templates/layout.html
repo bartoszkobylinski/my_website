@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/aef6646358.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index_style.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="navigation_bar">
+            <ul>
+                <li><a href="{{ url_for('index')}}">Main</a></li>
+                <li><a href="{{url_for('about_me')}}">About Me</a></li>
+                <li><a href="{{ url_for('projects')}}"> Projects</a></li>
+                <li id="cv">CV</li>
+                <li id="git"><a href="https://github.com/bartoszkobylinski"><i class="fab fa-github"></i></a></li>
+                <li id="contact"><a href="{{ url_for('contact')}}">Contact</a></li>
+            </ul>
+    </div>
+    {% block content%}
+    {% endblock %}   
+</body>
+</html>

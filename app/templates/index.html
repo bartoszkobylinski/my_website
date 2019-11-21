@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="header-text">
+    <h3>Hello, I am Bartek Kobylinski and I'm looking job/intern as Python Developer</h3>
+    <p>Below is short description about my newest projects or if you would like see details you can go to <span>projects.</span></p>
+
+</div>
+
+<div class="main_content__index">
+    <div class="first-project">
+        <div class="first-project__content">
+            <h3>Mars weather notification</h3>
+            <p>An app informing about current weather on Elysium Platinia - place next to the Mars equator where a NASA Lander is operating and gathering data.</p>
+        </div>
+        <div class="first-project__content_img">
+            <img src="{{url_for('static', filename='images/foxy.jpg')}}" alt="">
+        </div>
+    </div>
+    <div class="second-project">
+        <div class="second-project__content">
+            <h3>Sail Trip Planer</h3>
+            <p>A Script downloading a data about current conditions on specific coordinates on sea which helps to plane future sail trip</p>
+        
+        </div>
+        <div class="second-project__content-img">
+            <img src="{{url_for('static', filename='images/foxy.jpg')}}" alt="">
+        </div>
+    </div>
+    <div class="third-project">
+        <div class="third-project__content">
+            <h3>Financial Newsletter</h3>
+            <p>Script checking on a given websites if new articles has been published and if it's sending a notification on mail.</p>
+        </div>
+        <div class="third-project__content-img">
+            <img src="{{url_for('static', filename='images/foxy.jpg')}}" alt="">
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}
