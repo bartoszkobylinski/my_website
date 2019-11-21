@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, flash, request
+from flask import render_template, flash, request, redirect
 from app.forms import ContactForm
 
 
@@ -12,7 +12,7 @@ def index():
 def contact():
     form = ContactForm()
     if request.method == 'POST' and form.validate():
-        return render_template('thanks.html')
+        return render_template("thanks.html")
     elif request.method == 'GET':
         return render_template("contact.html", form=form)
 
