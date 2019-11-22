@@ -17,9 +17,7 @@ body{
 .navigation_bar ul li{
     display: inline-block;
     width: 150px;
-    font-size: 16px;
     border-left: 1px solid #bbb;
-    text-align: center;
     color: white;
 }
 .navigation_bar ul li:first-child{
@@ -28,6 +26,15 @@ border-left: none;
 .navigation_bar ul li a{
     text-decoration: none;
     color: #eee;
+}
+.navigation_bar ul li:hover{
+    background-color: #c6c6c6;
+    color: #383833;
+}
+
+.navigation_bar ul li a:hover{
+    background-color: #c6c6c6;
+    color: #383833;
 }
 .navigation_bar ul li i{
     font-size: 16px;
@@ -66,13 +73,16 @@ border-left: none;
     margin: 0;
     padding: 0;
 }
-.first-project, .second-project, .third-project{
+.first-project, 
+.second-project, 
+.third-project{
     display: flex;
     justify-content: space-between;
     padding-bottom: 25px;
 }
 
-.first-project__content-img, .third-project__content-img{
+.first-project__content-img, 
+.third-project__content-img{
     order: 1;
     width: auto;
 }
@@ -81,7 +91,8 @@ border-left: none;
     order: 2;
     width: auto;
 }
-.first-project__content, .third-project__content{
+.first-project__content, 
+.third-project__content{
     order: 2;
     margin: 100px;
     text-align: center;
@@ -92,7 +103,9 @@ border-left: none;
     margin: 100px;
     text-align: center;
 }
-.first-project__content h3, .second-project__content h3, .third-project__content h3{
+.first-project__content h3, 
+.second-project__content h3, 
+.third-project__content h3{
     color: #003366;
 }
 /* contact form */
@@ -110,9 +123,10 @@ border-left: none;
     margin-top: 100px;
     width: 600px;
 }
-.h1-contact{
+.h3-contact{
     margin-top: 100px;
     color: #003366;
+    font-size: 1em;
 }
 .contact-info{
     order: 2;
@@ -121,29 +135,32 @@ border-left: none;
     padding-top: 200px;
 }
 
-.form-name_label, .form-email_label, .form-message_label{
+.form-name_label, 
+.form-email_label, 
+.form-message_label{
     font-size: 1em;
     padding:10px;
 }
 
 .form-submit{
     margin: 25px;
-    width: 50px;
+    width: 75px;
     background-color: #333;
-    font-size: 1em bold;
+    font-size: 1em;
     border: 2px solid #000;
     border-radius: 10px;
     color:#ddd;
+    justify-content: center;
 }
 .input-form{
-    border: none;
+    border: 1px solid #989898;
     width: 400px;
-    background-color: #ddd;
+    background-color: #ffffff;
 }
 .input-form_message{
-    border: none;
+    border: 1px solid #989898;
     width: 400px;
-    background-color: #ddd;
+    background-color: #ffffff;
     height: 100px;
 }
 /* thanks */
@@ -156,11 +173,57 @@ border-left: none;
 }
 .thanks-div h3{
     color: #003366;
+    text-align: center;
 }
 #thanks-submit-button{
+    margin: 25px;
+    width: 125px;
+    background-color: #333;
+    font-size: 1em;
     border: 2px solid #000;
     border-radius: 10px;
-    background-color: #ddd;
-    color:#003366;
-    font-size: bold;
+    color:#ddd;
+    justify-content: center;
+}
+/* projects site */
+.projects-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+}
+.project-one, 
+.project-two, 
+.project-three {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-basis: 300px;
+}
+.project-one__printscreen,
+.project-two__printscreen, 
+.project-three__printscreen {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    padding: 20px;
+}
+.project-one__printscreen img,
+.project-two__printscreen img, 
+.project-three__printscreen img {
+    width: 100%;
+}
+.project-one__details, 
+.project-two__details, 
+.project-three__details {
+    text-align: center;
+} 
+.project-one__details ul, 
+.project-two__details ul, 
+.project-three__details ul {
+    list-style-type: none;
+} 
+.title{
+    font-size: 1em;
+    padding-bottom: 20px;
 }
