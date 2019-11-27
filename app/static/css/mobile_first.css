@@ -119,6 +119,16 @@ nav ul li i{
     text-align: center;
 }
 /* contact form */
+
+.flash {
+    color: #ff5252;
+    padding: 0.625rem;
+    width: auto;
+    margin: 0.3rem;
+  }
+.input-form__error{
+    border: 1px solid #ff5252;
+}
 .contact-content{
     display: flex;
     flex-direction: column;

@@ -1,9 +1,9 @@
-from flask_wtf import Form
-from wtforms import TextAreaField, SubmitField, ValidationError, StringField
+from flask_wtf import FlaskForm
+from wtforms import TextAreaField, SubmitField, StringField
 from wtforms.validators import InputRequired
 
-class ContactForm(Form):
+class ContactForm(FlaskForm):
     name = StringField("Name", validators=[InputRequired("Please enter your name")])
     email = StringField("Email", validators=[InputRequired("Please enter your mail")])
-    message = TextAreaField("Message", validators=[InputRequired("Didn't you want to say something?")])
+    message = TextAreaField("Message", validators=[InputRequired("Please enter you message")])
     submit = SubmitField("Send")

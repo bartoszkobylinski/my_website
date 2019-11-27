@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
     <div class="contact-content">
-        <form action="{{ url_for('contact') }}" method=post>
+        <form action="{{ url_for('contact') }}" method=post novalidate>
             <div class="contact-form">
                 <h3 id="h3-contact">If you would like to contact me please fill out contact form below,</h3>
 
@@ -10,11 +10,23 @@
                     {{ form.name.label(class_='form-name_label')}}
                     {{ form.name(class_="input-form") }}
 
+                        {% for message in form.name.errors %}
+                            <div class="flash">{{ message }}</div>
+                        {% endfor %}
+
                     {{ form.email.label(class_='form-email_label') }}
                     {{ form.email(class_="input-form") }}
-        
+
+                        {% for message in form.email.errors %}
+                            <div class="flash">{{ message }}</div>
+                        {% endfor %}
+
                     {{ form.message.label(class_='form-message_label') }}
                     {{ form.message(class_="input-form_message") }}
+
+                        {% for message in form.message.errors %}
+                            <div class="flash">{{ message }}</div>
+                        {% endfor %}
 
                     {{ form.submit(class_="form-submit") }}
             </div>
