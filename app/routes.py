@@ -45,3 +45,7 @@ def projects():
 @app.route('/thanks')
 def thanks():
     return render_template('thanks.html')
+
+@app.route('/hamburger')
+def hamburger():
+    return render_template('hamburger.html')

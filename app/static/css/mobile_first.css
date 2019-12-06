@@ -1,45 +1,59 @@
 body{
-    margin: 0rem;
+    margin: 0;
     font-family: 'Work Sans', sans-serif;
 }
 nav{
+    background-color: #333;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.hidden{
+    display: none;
+}
+li{
+    list-style-type: none;
+    text-align: center;
+    padding: 1rem;
+}
+#cv{
+    color:#ddd ;
+}
+a{
+    text-decoration: none;
+    color: #ddd;
+}
+li:hover{
+    background-color: #ddd;
+    cursor: pointer;
+}
+a:hover{
+    color: #333
+}
+
+.nav.responsive > ul{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 3rem;
 }
-nav ul{
-    padding: 1.5rem;
-    margin: 0rem;
-    text-align: center;
-    background-color:#333;
-}
-nav ul li{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    color: white;
-    height: 2rem;
-    vertical-align: middle;
+.nav.responsive > ul > div.hidden {
+    display: block;
 }
 
-nav ul li a{
-    text-decoration: none;
-    color: #eee;
+.nav.responsive > ul > li:last-child{
+    position:absolute;
+    right: 0;
 }
-nav ul li a:hover{
-    background-color: #c6c6c6;
-    color: #383833;
-}
-nav ul li i{
-    font-size: 1rem;
-}
-
 /* about me */
 
 .main_content{
-    margin: 12rem 0.3rem 0.3rem 0.3rem;
-    padding: 0.3rem;
+    margin: 0;
+    padding: 1rem;
     text-align: center;
 }
 .about_me h1,
@@ -55,7 +69,7 @@ nav ul li i{
 /* Index page */
 
 .header-text{
-    margin-top: 12rem;
+    margin: 0;
 }
 .header-text h3{
     margin: 0.3rem;
@@ -67,6 +81,10 @@ nav ul li i{
     margin: 0.3rem;
     padding: 1.25rem;
     text-align: center;
+}
+.header-text p a{
+    color: #333;
+    cursor: pointer;
 }
 .main_content__index{
     margin: 0rem;
@@ -109,6 +127,7 @@ nav ul li i{
 .second-project__content h3, 
 .third-project__content h3{
     margin: 0.3rem;
+    padding-bottom: 0.6rem;
     color: #003366;
     text-align: center;
 }
@@ -122,17 +141,13 @@ nav ul li i{
 
 .flash {
     color: #ff5252;
-    padding: 0.625rem;
     width: auto;
-    margin: 0.3rem;
+    margin: 0rem 0rem 1rem 0.3rem;
   }
-.input-form__error{
-    border: 1px solid #ff5252;
-}
 .contact-content{
     display: flex;
     flex-direction: column;
-    margin-top: 12rem;
+    margin: 0;
 }
 .contact-form{
     order: 1;
@@ -207,7 +222,7 @@ nav ul li i{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 12rem;
+    margin: 0;
 }
 .project-one{
     order: 1;
@@ -223,7 +238,6 @@ nav ul li i{
 .project-three{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     flex-basis: 100%;
 }
 .project-one__printscreen,
@@ -246,18 +260,68 @@ nav ul li i{
 .project-three__details ul {
     margin: 0.1rem;
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
 } 
 .title{
     font-size: 1rem;
-    padding-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.project-one__details ul li, 
+.project-two__details ul li, 
+.project-three__details ul li {
+    margin: 0;
+    padding: 0;
 }
 
 @media screen and (min-width: 600px){
+    .nav > ul{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color:#333;
+    }
+    .nav > ul > li{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 11.65%;
+        color: white;
+        vertical-align: middle;
+    }
+    
+    .nav > ul > li > a{
+        text-decoration: none;
+        color: #eee;
+    }
+    .nav > ul > li > a:hover{
+        background-color: #c6c6c6;
+        color: #383833;
+    }
+    .nav > ul > li > i{
+        font-size: 1rem;
+    }
+    .nav > ul > li:last-child{
+        display: none
+    }
+    .nav > ul > .hidden{
+        display: flex;
+        flex-direction: row;
+        width: 83.34%;
+    }
+    .nav > ul > .hidden > li{
+        width: 16.64%;
+    }
+    .nav > ul > .hidden > li:nth-child(3){
+        width: 12%;
+    }
 
 /* Index page */
 
 .header-text{
-    margin-top: 12rem;
+    margin: 0;
 }
 .header-text h3{
     margin: 0.3rem;
@@ -306,11 +370,16 @@ nav ul li i{
 .third-project__content p{
     text-align: center;
 }
+/* about me */
+.main_content{
+    margin: 0;
+    padding: 1.5rem;
+}
 /* contact form */
 .contact-content{
     display: flex;
     flex-direction: column;
-    margin-top: 12rem;
+    margin: 0;
 }
 .contact-form{
     order: 1;
@@ -382,10 +451,10 @@ nav ul li i{
 }
 /* projects site */
 .projects-wrapper {
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 12rem;
 }
 .project-one{
     order: 1;
@@ -401,7 +470,6 @@ nav ul li i{
 .project-three{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     flex-basis: 100%;
 }
 .project-one__printscreen,
@@ -424,10 +492,12 @@ nav ul li i{
 .project-three__details ul {
     margin: 0.1rem;
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
 } 
 .title{
     font-size: 1rem;
-    padding-bottom: 1.5rem;
+    text-align: center;
 }
 }
 @media screen and (min-width: 760px){
@@ -445,7 +515,6 @@ nav ul li i{
     nav ul li{
         display: inline-block;
         width: 6rem;
-        border-left: 1px solid #bbb;
         color: white;
     }
     nav ul li:first-child{
@@ -459,7 +528,6 @@ nav ul li i{
         background-color: #c6c6c6;
         color: #383833;
         width: 6rem;
-        border-left: 1px solid #bbb;
     }
     nav ul li a:hover{
         background-color: #c6c6c6;
@@ -473,14 +541,13 @@ nav ul li i{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin-top: 6.25rem;
+        margin-top: 1.5rem;
     }
     .project-one, 
     .project-two, 
     .project-three {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
     }
     .project-one__printscreen,
     .project-two__printscreen, 
@@ -506,7 +573,6 @@ nav ul li i{
     } 
     .title{
         font-size: 1rem;
-        padding-bottom: 1.5rem;
     }
     /* contact form */
 

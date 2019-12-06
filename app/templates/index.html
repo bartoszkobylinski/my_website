@@ -1,16 +1,15 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="header-text">
-    <h3>Hello, I am Bartek Kobylinski and I'm looking job/intern as Python Developer</h3>
-    <p>Below is short description about my newest projects or if you would like see details you can go to <span>projects.</span></p>
-
+    <h3>I’m Bartek <br> and I'm looking for a job as a Junior Python developer or any trainee/internship with Python.</h3>
+    <p>On this webpage you can find a brief information about my skills and projects developed so far. Detailed specification and technology used for each of the project you will find on my <a href="https://github.com/bartoszkobylinski">GitHub account</a>  or in the <a href="{{ url_for('projects')}}">project's page.</a></p>    
 </div>
 
 <div class="main_content__index">
     <div class="first-project">
         <div class="first-project__content">
             <h3>Mars weather notification</h3>
-            <p>An app informing about current weather on Elysium Platinia - place next to the Mars equator where a NASA Lander is operating and gathering data.</p>
+            <p>Created app informs about current weather on Elysium Planitia the plain to the north of the Mars equator where the Insight NASA Lander gathers data of the Martian interior. </p>
         </div>
         <div class="first-project__content_img">
             <img class="image" src="{{url_for('static', filename='images/foxy.jpg')}}" alt="Mars Weather Notification project printscreen">
