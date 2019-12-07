@@ -348,17 +348,24 @@ a:hover{
 }
 .first-project__content,
 .third-project__content{
-    margin: auto;
+    width: 50%;
     order: 1;
+    margin: auto;
 }
 .first-project__content_img,
-.second-project__content_img{
+.third-project__content_img{
+    width: 50%;
     order: 2;
 }
 .second-project__content{
+    order: 2;
+    width: 50%;
     margin: auto;
 }
-
+.second-project__content_img{
+    order: 1;
+    width: 50%;
+}
 .first-project__content h3, 
 .second-project__content h3, 
 .third-project__content h3{
