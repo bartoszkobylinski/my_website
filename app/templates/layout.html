@@ -8,16 +8,16 @@
     <script src="https://kit.fontawesome.com/aef6646358.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile_first.css') }}">
-    <title>{% block title %}{% endblock %}</title>
+    <title>{{ title }}</title>
 </head>
 <body>
     <nav class="nav" id="navigation">
         <ul>
-            <li><a id="main" href="{{ url_for('index')}}">Main</a></li>
+            <li><a id="main" href="{{ url_for('index') }}">Main</a></li>
                 <div class="hidden">
-                    <li><a href="{{url_for('about_me')}}">About Me</a></li>
-                    <li><a href="{{ url_for('projects')}}"> Projects</a></li>
-                    <li id="cv">CV</li>
+                    <li><a href="{{ url_for('about_me') }}">About Me</a></li>
+                    <li><a href="{{ url_for('projects') }}"> Projects</a></li>
+                    <li id="cv"><a href="{{ url_for('cv') }}">CV</a></li>
                     <li id="git"><a href="https://github.com/bartoszkobylinski"><i class="fab fa-github"></i></a></li>
                     <li id="contact"><a href="{{ url_for('contact')}}">Contact</a></li>
                 </div>

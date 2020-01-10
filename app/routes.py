@@ -18,9 +18,9 @@ mail.init_app(app)
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template("index.html")
+    return render_template("index.html", title='Main Page')
 
-@app.route('/contact', methods=['GET','POST'])
+@app.route('/contact', methods=['GET','POST'],)
 def contact():
     form = ContactForm()
     if request.method == 'POST': 
@@ -30,22 +30,22 @@ def contact():
             mail.send(message)
             return render_template("thanks.html")
         else:
-            return render_template('contact.html', form=form)
+            return render_template('contact.html',title='Contact Page', form=form)
     elif request.method == 'GET':
-        return render_template("contact.html", form=form)
+        return render_template("contact.html", title='Contact Page', form=form)
 
 @app.route('/about_me')
 def about_me():
-    return render_template('about_me.html')
+    return render_template('about_me.html', title='About me')
     
 @app.route('/projects')
 def projects():
-    return render_template('projects.html')
+    return render_template('projects.html', title='My projects')
 
 @app.route('/thanks')
 def thanks():
-    return render_template('thanks.html')
+    return render_template('thanks.html', title='Thank you')
 
-@app.route('/hamburger')
-def hamburger():
-    return render_template('hamburger.html')
+@app.route('/cv')
+def cv():
+    return render_template('cv.html', title='CV')
