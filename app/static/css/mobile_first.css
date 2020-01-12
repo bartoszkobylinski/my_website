@@ -1,6 +1,7 @@
 body{
     margin: 0;
     font-family: 'Work Sans', sans-serif;
+    background-color: #e5e4e2;
 }
 nav{
     background-color: #333;
@@ -52,9 +53,10 @@ a:hover{
 /* cv */
 
 .cv-container{
+    padding: 1.5rem;
     width: 100%;
 }
-.cv-container embed{
+.cv-container iframe{
     width: 100%;
     height: 60rem;
 }
@@ -642,6 +644,11 @@ a:hover{
         width: auto;
         min-height: 7rem;
     }
+    /* about me */
+    .main_content section{
+        width: 75%;
+        text-align: center;
+    }
 }
 @media screen and (min-width: 1150px){
     nav ul li{
@@ -669,4 +676,9 @@ a:hover{
         align-items: center;
         margin-top: 4rem;
     }
+    /* about me */
+    .main_content section{
+        width: 60%;
+        text-align: center;
+}
 }
