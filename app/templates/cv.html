@@ -2,12 +2,16 @@
 {% block content %}
 
 <div class="cv-container">
-    <embed src="{{url_for('static', filename ='cv/bartosz_kobylinski_cv.pdf')}}" type="application/pdf" style="width: 100%; height: 55rem;">
+
+    <iframe src="https://drive.google.com/open?id=1t3yc81-nhstlrmhkwkYAPKrn7Ek_qApF&embedded=true" frameborder="0"></iframe>
     <!--
+    <embed src="{{url_for('static', filename ='cv/bartosz_kobylinski_cv.pdf')}}" type="application/pdf" style="width: 100%; height: 55rem;">
+    
                 <iframe title="Bartosz_Kobylinski_CV" src="&embedded=true" style="width: 95%; height: 55rem;" frameborder="0"></iframe>
 
-    -->
     
+    <a href="{{ url_for ('static', filename='cv/bartosz_kobylinski_cv.pdf')}}">Moje CV</a>
+    -->
 </div>
 
 {% endblock %}
