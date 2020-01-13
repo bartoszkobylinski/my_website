@@ -45,9 +45,5 @@ def projects():
 @app.route('/thanks')
 def thanks():
     return render_template('thanks.html', title='Thank you')
-'''
-@app.route('/cv')
-def cv():
-    return render_template('cv.html', title='CV')\
-'''
+
 
