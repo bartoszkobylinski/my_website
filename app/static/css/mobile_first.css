@@ -79,7 +79,7 @@ a:hover{
 }
 .about_me h1,
 .about_me h3{
-    text-align: center;
+    text-align: left;
 }
 .about_me{
     display: inline-block;
@@ -89,6 +89,7 @@ a:hover{
 .about_me p,
 .about_me h4{
     text-indent: 1rem;
+    text-align: left;
 }
 
 /* Index page */
