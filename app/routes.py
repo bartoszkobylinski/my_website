@@ -23,15 +23,12 @@ def index():
 @app.route('/contact', methods=['GET','POST'])
 def contact():
     form = ContactForm()
-    if request.method == 'POST': 
-        if form.validate():
-            message = Message(subject="New message has been sent through your website", recipients=['bartosz.kobylinski@gmail.com'])
-            message.body = f"From:{form.name.data} and from email {form.email.data} and message {form.message.data}."
-            mail.send(message)
-            return render_template("thanks.html")
-        else:
-            return render_template('contact.html',title='Contact Page', form=form)
-    elif request.method == 'GET':
+    if request.method == 'POST' and form.validate(): 
+        message = Message(subject="New message has been sent through your website", recipients=['bartosz.kobylinski@gmail.com'])
+        message.body = f"From:{form.name.data} and from email {form.email.data} and message {form.message.data}."
+        mail.send(message)
+        return render_template("thanks.html")
+    else:
         return render_template("contact.html", title='Contact Page', form=form)
 
 @app.route('/about_me')
