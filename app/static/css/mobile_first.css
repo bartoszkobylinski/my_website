@@ -691,4 +691,22 @@ a:hover{
         width: 60%;
         text-align: center;
 }
+    /* index */
+.main_content__index,
+.header-text{
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+.header-text p{
+    font-size: 1.5rem;
+}
+.first-project__content,
+.first-project__content_img,
+.second-project__content,
+.second-project__content_img,
+.third-project__content,
+.third-project__content_img{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
 }
