@@ -78,6 +78,16 @@ a:hover{
     margin: 0;
 }
 
+.text_on_image{
+    position: absolute;
+    top: 0;
+    font-size: 0.9rem;
+    width: 56%;
+    color: #A85A4D;
+    text-align: left;
+    padding: 0% 3%;
+}
+
 .header-text p{
     margin: 0.3rem;
     padding: 1.25rem;
@@ -169,11 +179,6 @@ a:hover{
     top: 0;
     width: 100%;
     height: 100%;
-}
-.text_on_image{
-    position: absolute;
-    bottom: 0;
-    text-align: center;
 }
 /* contact form */
 
@@ -318,13 +323,9 @@ a:hover{
         vertical-align: middle;
     }
     
-    .nav > ul > li > a{
-        text-decoration: none;
-        color: #f1f5fa;
-    }
     .nav > ul > li > a:hover{
-        background-color: #C5DFF8;
-        color: #0A5785;
+        background-color: #f1f5fa;
+        color: #1198ea;
     }
     .nav > ul > li > i{
         font-size: 1rem;
@@ -345,11 +346,10 @@ a:hover{
     }
 
 /* Index page */
-
 .text_on_image{
-    top: 0;
+    width: 57%;
+    padding: 16% 4%;
 }
-
 .first-project, 
 .second-project, 
 .third-project,
@@ -405,16 +405,12 @@ a:hover{
     }
     nav ul li{
         display: inline-block;
-        width: 6rem;
-        
-    }
-    nav ul li:first-child{
-        border-left: none;
+        width: 6rem; 
     }
     nav ul li i{
         font-size: 1rem;
     }
-    /* projects site */
+    /* index site */
 
     /* contact form */
 
@@ -479,10 +475,7 @@ a:hover{
         background-color: #C5DFF8;
         padding: 1rem 13rem;
     }
-    .text_on_image h3{
-    font-size: 1.75rem;
-    color: #F1F5FA;
-    }
+ 
     .covering_img {
         background-color: rgba(255,255,255,0.05);
     }
