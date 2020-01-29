@@ -307,11 +307,10 @@ a:hover{
         width: 56%;
         color: #A85A4D;
         text-align: left;
-        padding: 16% 4%;
+        padding: 16% 2%;
     }
 
 }
-
 
 /*--------------------------------------------------------------------------------*/
 
@@ -356,7 +355,8 @@ a:hover{
 /* Index page */
 .text_on_image{
     width: 57%;
-    padding: 16% 4%;
+    font-size: 1.25rem;
+    padding: 13% 2%;
 }
 .first-project, 
 .second-project, 
@@ -419,6 +419,12 @@ a:hover{
         font-size: 1rem;
     }
     /* index site */
+
+    .text_on_image{
+        font-size: 1.5rem;
+        width: 56%;
+        padding: 7% 3%;
+    }
 
     /* contact form */
 
@@ -483,10 +489,13 @@ a:hover{
         background-color: #C5DFF8;
         padding: 1rem 13rem;
     }
- 
-    .covering_img {
-        background-color: rgba(255,255,255,0.05);
+
+    .text_on_image{
+        font-size: 1.7rem;
+        width: 56%;
+        padding: 8% 3%;
     }
+
     .text_cover{
         text-align: center;
     }
@@ -498,4 +507,21 @@ a:hover{
     .fifth-project{
         width: 28%;
     }
+}
+
+@media screen and (min-width: 1450px){
+
+    .text_on_image{
+        font-size: 2rem;
+        width: 56%;
+        padding: 9% 3%;
+}
+}
+
+@media screen and (min-width: 1850px){
+    .text_on_image{
+        font-size: 3.25rem;
+        width: 56%;
+        padding: 10% 2%;
+}
 }
