@@ -18,7 +18,7 @@ mail.init_app(app)
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template("index.html", title='Main Page')
+    return render_template("index2.html", title='Main Page')
 
 @app.route('/contact', methods=['GET','POST'])
 def contact():
@@ -37,7 +37,7 @@ def about_me():
     
 @app.route('/projects')
 def projects():
-    return render_template('projects.html', title='My projects')
+    return render_template('projects2.html', title='My projects')
 
 @app.route('/thanks')
 def thanks():
