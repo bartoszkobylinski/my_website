@@ -1,80 +1,8 @@
 {% extends "layout.html" %}
 {% block content %}
-    <div class="header-text">
-        <div class="image_of_me">
-            <img src="{{url_for('static', filename='images/verdens_ja.jpg')}}" alt="">
-            <div class="text_on_image">
-                <h3>I’m Bartek Kobylinski and I'm looking for a job as a Junior Python Developer or any trainee/internship with Python.</h3>
-            </div>
-        </div>
-        <div class="text-cover">
-            <p><strong>On this webpage you can find a brief information about my skills and projects developed so far. Detailed specification and technology used for each of the project you will find on my <a href="https://github.com/bartoszkobylinski">GitHub account</a>.</strong></p> 
-        </div>
-    </div>
 
-    <div class="main_content__index">
-        <div class="first-project">
-
-            <div class="first-project__content_img">
-                <img class="image" src="{{url_for('static', filename='images/mars_screen.png')}}" alt="Mars Weather Notification project printscreen">
-            </div>
-            <div class="first-project__content">
-                <h3>Mars weather notification</h3>
-                <p>Created app informs about current weather on Elysium Planitia the plain to the north of the Mars equator where the Insight NASA Lander gathers data of the Martian interior. </p>
-            </div>
-            <div class="first-project__technology">
-                <p><strong>Python, HTML5, Flask</strong></p>
-            </div>
-            
-        </div>
-        <div class="second-project">
-            <div class="second-project__content">
-                <h3>Sail Trip Planer</h3>
-                <p>The created script helps to plan sail trip from Oslo to Swinoujscie by gathering current forecast data on the specific sea coordinates.</p>
-            
-            </div>
-            <div class="second-project__content_img">
-                <img class="image" src="{{url_for('static', filename='images/sail_trip.png')}}" alt="Sail Trip Planer project printscreen">
-            </div>
-            <div class="first-project__technology">
-                <p><strong>Python, Java Script, HTML5, Flask, SQLite</strong></p>
-            </div>
-        </div>
-        <div class="third-project">
-            <div class="third-project__content">
-                <h3>Financial Newsletter</h3>
-                <p>I was asked for preparing the tool which will help to keep up to date with the information concerning changes in the Polish tax legal system. The created script is monitoring new articles published on the selected websites (in this context – Polish tax administration official websites). The user receives notification from the script by mail about the made changes as soon as they are published on the selected website.</p>
-            </div>
-            <div class="third-project__content_img">
-                <img class="image" src="{{url_for('static', filename='images/fin-min.png')}}" alt="Financial Newsletter project printscreen">
-            </div>
-            <div class="first-project__technology">
-                <p><strong>Python, Requests, GitHub</strong></p>
-            </div>
-        </div>
-        <div class="fourth-project">
-            <div class="fourth-project__content">
-                <h3>Mountain Forecast App</h3>
-                <p>Application gathered current forecast for Zakopane and Tatra mountains area. App shows weather forecast, warnings and conditions on 16 peaks of Tatras mountains. </p>
-            </div>
-            <div class="fourth-project__content_img">
-                <img class="image" src="#" alt="Printscreen comming soon">
-            </div>
-            <div class="fourth-project__technology">
-                <p><strong>Python, HTML5, Django, PostgreSQL</strong></p>
-            </div>
-        </div>
-        <div class="fifth-project">
-            <div class="fifth-project__content">
-                <h3>Delayed Flights</h3>
-                <p>Application gathered data about flight delays on airports.</p>
-            </div>
-            <div class="fifth-project__content_img">
-                <img class="image" src="#" alt="Printscreen comming soon">
-            </div>
-            <div class="fifth-project__technology">
-                <p><strong>Python, HTML5, DjangoREST</strong></p>
-            </div>
-        </div>
-    </div>
+    <main>
+        <div class="picture"><img src="{{ url_for('static', filename='images/bart1_black.png')}} " alt=""></div>    
+    </main>
+    
 {% endblock %}

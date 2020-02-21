@@ -1,101 +1,59 @@
 {% extends "layout.html" %}
-
-{% block title %}Projects{% endblock %}
-
 {% block content %}
-
-<div class="projects-wrapper">
-    <div class="project-one">
-        <h5 class="title">Mars weather notification</h5>
-        <div class="project-one__printscreen">
-            <img src="{{url_for('static', filename='images/mars_screen.png')}}" alt="project printscreen">
+    <div class="projects-wrapper">
+        <div class="project" id="first">
+            <a href="https://github.com/bartoszkobylinski/mars_weather_notification">
+                <div id="first-text">
+                    <h3>Mars weather notification</h3>
+                    <p>Created app informs about current weather on Elysium Planitia the plain to the north of the Mars equator where the Insight NASA Lander gathers data of the Martian interior.</p>
+                </div>
+            </a>
+            <div class="project-image"><img src="{{ url_for('static', filename='images/mars.jpg' )}}" alt=""></div>
+        </div>     
+        <div class="project" id="second">
+            <a href="https://github.com/bartoszkobylinski/sail_trip_planer">
+                <div id="second-text">
+                    <h3>Sail Trip Planer</h3>
+                    <p>The created script helps to plan sail trip from Oslo to Swinoujscie by gathering current forecast data on the specific sea coordinates.</p>
+                </div>
+            </a>
+            
+            <div class="project-image"><img data-hover="" src="{{ url_for('static', filename='images/sail.jpg' )}}" alt=""></div>
         </div>
-        <div class="project-one__details">
-            <ul>
-                <li>Python</li>
-                <li>HTML 5</li>
-                <li>CSS 3</li>
-                <li>Flask</li>
-                <li>Schedule</li>
-                <li>API connection</li>
-                <li>Requests</li>
-                <li>Git</li>
-            </ul>
+        <div class="project" id="third">
+            <a href="https://github.com/bartoszkobylinski/articles_scraper">
+                <div  id="third-text">
+                    <h3>Financial Newsletter</h3>
+                    <p>I was asked for preparing the tool which will help to keep up to date with the information concerning changes in the Polish tax legal system. The created script is monitoring new articles published on the selected websites (in this context – Polish tax administration official websites). The user receives notification from the script by mail about the made changes as soon as they are published on the selected website.</p>
+                </div>
+            </a>
+            <div class="project-image"><img src="{{ url_for('static', filename='images/tax.jpg' )}}" alt=""></div>
         </div>
-    </div>
-    <div class="project-two">
-        <h5 class="title">Sail Trip Planer</h5>
-        <div class="project-two__printscreen">
-                <img src="{{url_for('static', filename='images/sail_trip.png')}}" alt="project printscreen">
+        <div class="project" id="fourth">
+            <a href="https://github.com/bartoszkobylinski/mountain_weather">
+                <div id="fourth-text">
+                    <h3>Mountain weather aggregator</h3>
+                    <p>App aggregates condition, warnings and weather data at mountain. Still in coding progress</p>
+                </div>
+            </a>
+            <div class="project-image"><img src="{{ url_for('static', filename='images/mountain.jpg' )}}" alt=""></div>
         </div>
-        <div class="project-two__details">
-            <ul>
-                <li>Python</li>
-                <li>Java Script</li>
-                <li>HTML 5</li>
-                <li>CSS 3</li>
-                <li>Flask</li>
-                <li>Schedule</li>
-                <li>Requests</li>
-                <li>SQLite</li>
-                <li>Selenium</li>
-                <li>Git</li>
-            </ul>
+        <div class="project" id="fifth">
+            <div id="fifth-text">
+                <h3>Flight delays</h3>
+                <p>Nothing to show yet. Still in concept step</p>
+            </div>
+            <div class="project-image"><img src="{{ url_for('static', filename='images/flight.jpg' )}}" alt=""></div>
         </div>
-    </div>
-    <div class="project-three">
-        <h5 class="title">Financial Newsletter</h5>
-        <div class="project-three__printscreen">
-                <img src="{{url_for('static', filename='images/fin-min.png')}}" alt="project printscreen">
-        </div>
-        <div class="project-three__details">
-            <ul>
-                <li>Python</li>
-                <li>Schedule</li>
-                <li>Requests</li>
-                <li>SQLite</li>
-                <li>Selenium</li>
-                <li>Git</li>
-            </ul>
-        </div>
-    </div>
-    <div class="project-four">
-        <h5 class="title">Mountain Forecast App</h5>
-        <div class="project-four__printscreen">
-            <img src="#" alt="Project printscreen comming soon">
-        </div>
-        <div class="project-four__details">
-            <ul>
-                <li>Python</li>
-                <li>HTML 5</li>
-                <li>CSS 3</li>
-                <li>Django</li>
-                <li>Cron</li>
-                <li>API connection</li>
-                <li>Requests</li>
-                <li>Git</li>
-                <li>PostgreSQL</li>
-            </ul>
+        <div class="project" id="git">
+            <a href="https://github.com/bartoszkobylinski">
+                <div id="sixth-text">
+                    <h3>GITHUB</h3>
+                    <p>Here you can go directly to my Github account!</p>
+                </div>
+            </a>
+            <div class="project-image"><img src="{{ url_for('static', filename='images/git.png')}}" alt=""></div>
         </div>
     </div>
-    <div class="project-five">
-        <h5 class="title">Delayed flights</h5>
-        <div class="project-five__printscreen">
-            <img src="#" alt="Project printscreen comming soon">
-        </div>
-        <div class="project-five__details">
-            <ul>
-                <li>Python</li>
-                <li>HTML 5</li>
-                <li>CSS 3</li>
-                <li>Djang REST</li>
-                <li>API connection</li>
-                <li>Requests</li>
-                <li>Git</li>
-            </ul>
-        </div>
-    </div>
-</div>
-</div>
 
 {% endblock %}

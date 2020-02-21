@@ -1,46 +1,48 @@
 {% extends "layout.html" %}
 {% block content %}
+
+<div class="contact-wrapper">
     <div class="contact-content">
         <form action="{{ url_for('contact') }}" method=post novalidate>
             <div class="contact-form">
                 <h3 id="h3-contact">If you would like to contact me please fill out contact form below,</h3>
-
-                    {{ form.hidden_tag() }}
-
-                    {{ form.name.label(class_='form-name_label')}}
-                    {{ form.name(class_="input-form") }}
-
-                        {% for message in form.name.errors %}
-                            <div class="flash">{{ message }}</div>
-                        {% endfor %}
-
-                    {{ form.email.label(class_='form-email_label') }}
-                    {{ form.email(class_="input-form") }}
-
-                        {% for message in form.email.errors %}
-                            <div class="flash">{{ message }}</div>
-                        {% endfor %}
-
-                    {{ form.message.label(class_='form-message_label') }}
-                    {{ form.message(class_="input-form_message") }}
-
-                        {% for message in form.message.errors %}
-                            <div class="flash">{{ message }}</div>
-                        {% endfor %}
-
-                    {{ form.submit(class_="form-submit") }}
+    
+                        {{ form.hidden_tag() }}
+    
+                        {{ form.name.label(class_='form-name_label')}}
+                        {{ form.name(class_="input-form") }}
+    
+                            {% for message in form.name.errors %}
+                                <div class="flash">{{ message }}</div>
+                            {% endfor %}
+    
+                        {{ form.email.label(class_='form-email_label') }}
+                        {{ form.email(class_="input-form") }}
+    
+                            {% for message in form.email.errors %}
+                                <div class="flash">{{ message }}</div>
+                            {% endfor %}
+    
+                        {{ form.message.label(class_='form-message_label') }}
+                        {{ form.message(class_="input-form_message") }}
+    
+                            {% for message in form.message.errors %}
+                                <div class="flash">{{ message }}</div>
+                            {% endfor %}
+    
+                        {{ form.submit(class_="form-submit") }}
             </div>
         </form>
-
+    
         <div class="contact-info">
             <h3>or you can call me or send e-mail directly.</h3>
             <div class="contact-details">
-                <h5><i class="fas fa-mobile"> +47 485 03 997</i></h5>
-                <h5><i class="fas fa-at"></i> bartosz.kobylinski@gmail.com</h5>
+                    <h4><i class="fas fa-mobile"> +47 485 03 997</i></h4>
+                    <h4><i class="fas fa-at"></i> bartosz.kobylinski@gmail.com</h4>
             </div>
-            
+                
         </div> 
     </div>
-    
-    
+</div>
+
 {% endblock %}

@@ -11,22 +11,18 @@
     <title>{{ title }}</title>
 </head>
 <body>
-    <nav class="nav" id="navigation">
-        <ul>
-            <li><a id="main" href="{{ url_for('index') }}">Main</a></li>
-                <div class="hidden">
-                    <li><a href="{{ url_for('about_me') }}">About Me</a></li>
-                    <li><a href="{{ url_for('projects') }}"> Projects</a></li>
-                    <li id="cv"><a href='static/cv/bartosz_kobylinski_cv.pdf'>CV</a></li>
-                    <li id="git"><a href="https://github.com/bartoszkobylinski"><i class="fab fa-github"></i></a></li>
-                    <li id="contact"><a href="{{ url_for('contact')}}">Contact</a></li>
-                </div>
-            <li>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fas fa-bars"></i>
-                </a>
-            </li>
-        </ul>
+    <nav>
+        <div class="name-wrapper">
+            <div class="name">
+                <a id="top" href="{{ url_for ('index')}}">bartosz kobylinski</a>
+                <a id="bottom" href="{{ url_for ('index')}}">python developer</a>
+            </div>  
+        </div>
+        <div class="navigation-bars">
+            <a href="{{ url_for ('about_me')}}">about</a>
+            <a href="{{ url_for ('projects')}}">projects</a>
+            <a href="{{ url_for ('contact')}}">contact</a>
+        </div>
     </nav>
 
     {% block content%}
