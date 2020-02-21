@@ -91,7 +91,7 @@ nav .name #bottom{
 /* projects page */
 .projects-wrapper{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     grid-gap: 1rem;
     padding: 1rem;
 }
@@ -114,6 +114,9 @@ nav .name #bottom{
     height: 100%;
     color: #e1e1e1;
     font-size: 1.3rem;
+}
+.project #third-text{
+    font-size: 1rem;
 }
 .project #first-text h3,
 .project #second-text h3,
@@ -200,6 +203,7 @@ nav .name #bottom{
     background-color: #e1e1e1;
 }
 /*-------------------------------------------------------*/
+
 @media screen and (min-width: 700px){
 
 
@@ -257,17 +261,37 @@ nav .name #bottom{
     .contact-content{
         width: 60%;
     }
-    /* about me*/
-    .about_me{
-        width: 70%;
-    }
-    /* contact */
+
+
     .form-submit{
         transform: translate(285%);
         width: 15%;
         height: 2rem;
     }
+
+    /* about me*/
+    .about_me{
+        width: 70%;
+    }
+
+    /* project */
     
+        .project #third-text{
+            font-size: 1.1rem;
+        }
+}
+@media screen and (min-width: 1150px){
+    .project #third-text{
+        font-size: 1.2rem;
+    }
+
+    .projects-wrapper{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(375px,1fr));
+        grid-gap: 1rem;
+        padding: 1rem;
+    }
+
 }
 @media screen and (min-width: 1600px){
     /* project page */
