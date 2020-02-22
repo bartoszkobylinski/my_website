@@ -7,7 +7,7 @@ from app.credentials import credentials
 app.config["MAIL_SERVER"] = 'smtp.gmail.com'
 app.config["MAIL_PORT"] = 465
 app.config["MAIL_USE_SSL"] = True
-app.config["MAIL_DEFAULT_SENDER"] = 'bartosz.kobylinski@gmail.com'
+app.config["MAIL_DEFAULT_SENDER"] = credentials.get('username')
 app.config["MAIL_USERNAME"] = credentials.get('username')
 app.config["MAIL_PASSWORD"] = credentials.get('password')
 
@@ -24,7 +24,7 @@ def index():
 def contact():
     form = ContactForm()
     if request.method == 'POST' and form.validate(): 
-        message = Message(subject="New message has been sent through your website", recipients=['bartosz.kobylinski@gmail.com'])
+        message = Message(subject="New message has been sent through your website", recipients=[credentials.get('username')])
         message.body = f"From:{form.name.data} and from email {form.email.data} and message {form.message.data}."
         mail.send(message)
         return render_template("thanks.html")

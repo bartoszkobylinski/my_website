@@ -202,6 +202,29 @@ nav .name #bottom{
     min-height: 8rem;
     background-color: #e1e1e1;
 }
+
+/* thanks */
+.thanks-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.thanks-div{
+    text-align: center;
+}
+.thanks-div h3,
+.thanks-div h5{
+    padding: 1rem;
+}
+
+.thanks-div a input{
+    background-color: #1d84b5;
+    border-radius: 10px;
+    border: none;
+    color: #e1e1e1;
+    width: 100px;
+    height: 30px;
+}
+
 /*-------------------------------------------------------*/
 
 @media screen and (min-width: 700px){
