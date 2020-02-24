@@ -105,18 +105,16 @@ nav .name #bottom{
 .project #fourth-text,
 .project #fifth-text,
 .project #sixth-text{
+    cursor: pointer;
     position: absolute;
     background-color: black;
-    opacity: 0.6;
+    opacity: 0.8;
     width: 100%;
     padding-top: 1rem;
     padding: 0.5rem;
     height: 100%;
     color: #e1e1e1;
-    font-size: 1.3rem;
-}
-.project #third-text{
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 .project #first-text h3,
 .project #second-text h3,
@@ -124,7 +122,9 @@ nav .name #bottom{
 .project #fourth-text h3,
 .project #fifth-text h3,
 .project #sixth-text h3 {
+    text-transform: uppercase;
     text-align: center;
+    font-size: 1.5rem;
     padding-bottom: 1rem;
 }
 
@@ -227,6 +227,29 @@ nav .name #bottom{
 
 /*-------------------------------------------------------*/
 
+@media screen and (min-width: 400px){
+    
+    .project #first-text,
+    .project #second-text,
+    .project #third-text,
+    .project #fourth-text,
+    .project #fifth-text,
+    .project #sixth-text{
+        font-size: 1.6rem;
+}
+@media screen and (min-width: 600px){
+    .project #first-text,
+    .project #second-text,
+    .project #third-text,
+    .project #fourth-text,
+    .project #fifth-text,
+    .project #sixth-text{
+        font-size: 2.5rem;
+}
+}
+
+
+
 @media screen and (min-width: 700px){
 
 
@@ -272,6 +295,15 @@ nav .name #bottom{
        width: 80%;
    }
 
+   .project #first-text,
+    .project #second-text,
+    .project #third-text,
+    .project #fourth-text,
+    .project #fifth-text,
+    .project #sixth-text{
+        font-size: 1.6rem;
+}
+
 }
 @media screen and (min-width: 800px){
     /* contact */
@@ -296,17 +328,19 @@ nav .name #bottom{
     .about_me{
         width: 70%;
     }
+    /* projects */
+    .project #first-text,
+    .project #second-text,
+    .project #third-text,
+    .project #fourth-text,
+    .project #fifth-text,
+    .project #sixth-text{
+        font-size: 1.4rem;
+}
 
-    /* project */
-    
-        .project #third-text{
-            font-size: 1.1rem;
-        }
 }
 @media screen and (min-width: 1150px){
-    .project #third-text{
-        font-size: 1.2rem;
-    }
+
 
     .projects-wrapper{
         display: grid;
@@ -337,4 +371,6 @@ nav .name #bottom{
     .picture{
         width: 60%;
     }
+
+}
 }
