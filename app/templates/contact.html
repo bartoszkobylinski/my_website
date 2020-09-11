@@ -29,6 +29,12 @@
                             {% for message in form.message.errors %}
                                 <div class="flash">{{ message }}</div>
                             {% endfor %}
+                        {{ form.question.label(class_='form-question_label')}}
+                        {{ form.question(class_="input-form") }}
+
+                            {% for message in form.question.errors %}
+                                <div class="flash">{{ message }}</div>
+                            {% endfor %}
     
                         {{ form.submit(class_="form-submit") }}
             </div>

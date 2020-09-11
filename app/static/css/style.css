@@ -176,7 +176,8 @@ nav .name #bottom{
 }
 .form-name_label, 
 .form-email_label, 
-.form-message_label{
+.form-message_label,
+.form-question_label{
     margin: 0.3rem;
 }
 .form-submit{
