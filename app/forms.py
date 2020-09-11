@@ -25,10 +25,10 @@ class ContactForm(FlaskForm):
                    message="Message can contain only 200 characters")
             ]
             )
-    question = StringField("Please enter a result of 15 + 16 *",
+    question = StringField("What is the capital city in Norway *",
                            validators=[
                                 InputRequired(
-                                    "Please enter a result of 15+16"),
-                                Length(min=1, max=2)
+                                    "Please answer"),
+                                Length(min=4, max=4)
                                          ])
     submit = SubmitField("Send")

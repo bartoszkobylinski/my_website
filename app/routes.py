@@ -25,7 +25,7 @@ def index():
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     form = ContactForm()
-    question = "31"
+    question = "Oslo"
     if request.method == 'POST' and form.validate():
         message = Message(
                 subject="New message has been sent through your website",
