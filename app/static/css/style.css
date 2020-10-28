@@ -4,9 +4,10 @@
     padding: 0;
 }
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #24272b;
     background-color: #fdfdfd;
+    
 }
 
 /* navigation bar */
@@ -81,10 +82,23 @@ nav .name #bottom{
 .main_content{
     padding: 1rem;
 }
-.about_me h1,
-.about_me h3,
-.about_me p{
-    padding: 1rem;
+.about_me{
+    padding-bottom: 3rem;
+}
+.about_me ul{
+    list-style: none;
+}
+.about_me p,
+.about_me h5,
+.about_me ul li{
+    margin-top: 1rem;
+}
+.my-motto{
+    text-transform: uppercase;
+}
+.about_me h2,
+.about_me h3{
+    margin: 2rem 0rem
 }
 
 
