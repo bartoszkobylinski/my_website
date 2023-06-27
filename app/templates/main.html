@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main_style.css') }}">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</head>
+<body>
+<main>
+    <div id="typed-strings">
+        <span>python</span>
+        <span>backend developer</span>
+        <span>no-code lover</span>
+        <span>AI tool seeker</span>
+    </div>
+    <div class="json-block">
+        <div class="json-item">
+            <p>
+                <span class="key">name</span>
+                <span class="attribute">bartosz kobylinski</span>
+            </p>
+            <p>
+                <span class="key">description</span>
+                <span id="typed" class="attribute"></span>
+                <script>
+                        var typed = new Typed("#typed", {
+                        stringsElement: "#typed-strings",
+                        backSpeed: 10,
+                        typeSpeed: 30,
+                        backDelay: 1000,
+                        loop: true,
+                        smartBackspace: true,
+                      });
+                </script>
+            </p>
+            <p>
+                <span class="key">github</span>
+                <a href="https://github.com/bartoszkobylinski" class="attribute">https://github.com/bartoszkobylinski</a>
+            </p>
+        </div>
+        <div class="json-item list">
+            <p>
+                <span class="key-block">address</span>
+            </p>
+            <p>
+                <span class="block-key">city</span>
+                <span class="block-attribute">oslo</span>
+            </p>
+            <p>
+                <span class="block-key">country</span>
+                <span class="block-attribute">norway</span>
+            </p>
+        </div>
+        <div class="json-item list">
+            <p>
+                <span class="key-block">contact</span>
+            </p>
+            <p>
+                <span class="block-key">linkedin</span>
+                <a href="https://www.linkedin.com/in/bartosz-kobylinski-a75a2389/" class="block-attribute">https://www.linkedin.com/in/bartosz-kobylinski/</a>
+            </p>
+            <p>
+                <span class="block-key">mail</span>
+                <span class="block-attribute">bartosz.kobylinski(at)gmail.com</span>
+            </p>
+        </div>
+        <div class="json-item"></div>
+        <div class="json-item">
+            <p>
+                <span class="tech-block">tech</span>
+            </p>
+            <div class="tech">
+                <p class="tech-p">python3</p>
+                <p class="tech-p">js</p>
+                <p class="tech-p">html/css</p>
+                <p class="tech-p">django</p>
+                <p class="tech-p">flask</p>
+                <p class="tech-p">no-code</p>
+                <p class="tech-p">make</p>
+                <p class="tech-p">docker</p>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

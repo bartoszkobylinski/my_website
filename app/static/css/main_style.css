@@ -1,0 +1,77 @@
+body{
+    background-color: #282828;
+    font-family: "hack", monospace;
+    font-size: 20px;
+    line-height: 0.5;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12rem;
+    margin-top: 8rem;
+}
+main:before{
+    content: "{";
+    color: #c1d1c6;
+    margin-left: -1rem;
+}
+main:after{
+    content: "}";
+    color: #c1d1c6;
+    margin-left: -1rem;
+}
+
+.list:after{
+    content: "},";
+    color: #c1d1c6;
+    margin-left: 1.5rem;
+}
+
+.json-block{
+    width: 1200px;
+}
+.key,
+.key-block,
+.block-key,
+.tech-block{
+    color: #e9967a;
+}
+.attribute,
+.block-attribute,
+.tech-p{
+    color: #a3b462;
+}
+.block-key{
+    margin-left: 1.5rem
+}
+
+.key:after,
+.block-key:after{
+    content: ": ";
+    color: #c1d1c6;
+}
+.tech-block:after{
+    content: ": [";
+    color: #c1d1c6;
+}
+.tech:after{
+    content: "],";
+    color: #c1d1c6;
+}
+.key-block:after{
+    content: ": {";
+    color: #c1d1c6;
+}
+
+.attribute:before,
+.attribute:after,
+.tech-p:before,
+.tech-p:after,
+.block-attribute:before,
+.block-attribute:after{
+    content: '"'
+}
+a:hover{
+    color: #5c4b9d;
+}
