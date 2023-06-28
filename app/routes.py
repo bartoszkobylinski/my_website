@@ -1,9 +1,10 @@
 import logging
-from app import app
-from flask import render_template, request
+from flask import Flask, render_template, request
 from app.forms import ContactForm
 from flask_mail import Mail, Message
 from app.credentials import credentials
+
+app = Flask(__name__)
 
 logging.basicConfig(filename="my_website_logs.log", level=logging.WARNING)
 
