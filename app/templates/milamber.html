@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/milamber_style.css') }}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<main>
+    <div>
+        {% for speaker, message in conversation %}
+            {% if speaker == 'user' %}
+                <div class="user-message">
+                    <div class="text-wrapper"><p>{{ message }}</p></div>
+                </div>
+            {% else %}
+                <div class="milamber-message">
+                    <div class="image-wrapper"><img src="{{ url_for('static', filename='images/milamber_copy.png') }}" alt="Milamber"></div>
+                    <div class="text-wrapper">
+                        <div class="milamber-name">
+                            <p>Milamber</p>
+                        </div>
+                        <div class="milamber-answer" >
+                            <p>{{ message }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <form action="{{ url_for('ask_milamber') }}" method="post">
+        <label for="user_message">You:</label>
+        <input type="text" name="user_message" id="user_message" required>
+        <button type="submit">
+            <span class="material-symbols-outlined">send</span>
+        </button>
+    </form>
+</main>
+
+</body>
+</html>

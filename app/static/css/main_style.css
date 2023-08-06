@@ -20,6 +20,7 @@ main:after{
     content: "}";
     color: #c1d1c6;
     margin-left: -1rem;
+    padding: 1rem 0;
 }
 
 .list:after{
@@ -74,4 +75,8 @@ main:after{
 }
 a:hover{
     color: #5c4b9d;
+}
+
+.json-item:last-child{
+    margin-top: 1rem;
 }
