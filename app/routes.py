@@ -1,7 +1,8 @@
+import json.decoder
 import logging
 import os
 import requests
-from flask import Flask, render_template, session, request, url_for, redirect
+from flask import Flask, flash, render_template, session, request, url_for, redirect
 
 app = Flask(__name__)
 
@@ -40,14 +41,17 @@ def thanks():
 def milamber():
     conversation = session.get("conversation", [])
     if not conversation:
-        greeting_message_json = {
-            "query": "Greet kindly a user and tell in a short way who you are with telling your name and who do you "
-                     "assist?",
-            "type": "query"
-        }
-        response = requests.post(milamber_webhook, json=greeting_message_json)
-        greeting_response = response.json()
-        conversation.append(('milamber', greeting_response.get('answer', '')))
+        try:
+            greeting_message_json = {
+                "query": "Greet kindly a user and tell in a short way who you are with telling your name and who do you"
+                         "assist?",
+                "type": "query"
+            }
+            response = requests.post(milamber_webhook, json=greeting_message_json)
+            greeting_response = response.json()
+            conversation.append(('milamber', greeting_response.get('answer', '')))
+        except json.decoder.JSONDecodeError:
+            flash("'Something went wrong with the server. Please try again later.")
         session['conversation'] = conversation
     return render_template('milamber.html', title="Milamber", conversation=conversation)
 
@@ -59,12 +63,15 @@ def ask_milamber():
         "query": user_message,
         "type": "query"
     }
-    response = requests.post(milamber_webhook, json=user_message_json)
-    milamber_response = response.json()
+    try:
+        response = requests.post(milamber_webhook, json=user_message_json)
+        milamber_response = response.json()
 
-    conversation = session.get('conversation', [])
-    conversation.append(('user', user_message))
-    conversation.append(('milamber', milamber_response.get('answer', '')))
-    session['conversation'] = conversation
+        conversation = session.get('conversation', [])
+        conversation.append(('user', user_message))
+        conversation.append(('milamber', milamber_response.get('answer', '')))
+        session['conversation'] = conversation
+    except json.decoder.JSONDecodeError:
+        flash('Something went wrong with the server. Please try again later.')
 
     return redirect(url_for('milamber'))
