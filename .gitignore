@@ -1,4 +1,10 @@
-.vscode
-__pycache__
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+.DS_Store
 credentials.py
 requirement.txt
+my_website_logs.log
+my_diff.txt
+preview_styles.html

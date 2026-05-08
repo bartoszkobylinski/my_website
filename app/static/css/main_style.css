@@ -1,82 +1,76 @@
-body{
-    background-color: #282828;
-    font-family: "hack", monospace;
-    font-size: 20px;
-    line-height: 0.5;
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #f7f5ef;
+    color: #1a1a1a;
+    font-family: "JetBrains Mono", "SF Mono", ui-monospace, Menlo, monospace;
+    font-size: 14px;
+    line-height: 1.7;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    margin-left: 12rem;
-    margin-top: 8rem;
-}
-main:before{
-    content: "{";
-    color: #c1d1c6;
-    margin-left: -1rem;
-}
-main:after{
-    content: "}";
-    color: #c1d1c6;
-    margin-left: -1rem;
-    padding: 1rem 0;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 64px 28px 80px;
 }
 
-.list:after{
-    content: "},";
-    color: #c1d1c6;
-    margin-left: 1.5rem;
+h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 28px;
+    letter-spacing: -0.01em;
 }
 
-.json-block{
-    width: 1200px;
-}
-.key,
-.key-block,
-.block-key,
-.tech-block{
-    color: #e9967a;
-}
-.attribute,
-.block-attribute,
-.tech-p{
-    color: #a3b462;
-}
-.block-key{
-    margin-left: 1.5rem
+h2 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 40px 0 14px;
+    color: #1a1a1a;
 }
 
-.key:after,
-.block-key:after{
-    content: ": ";
-    color: #c1d1c6;
-}
-.tech-block:after{
-    content: ": [";
-    color: #c1d1c6;
-}
-.tech:after{
-    content: "],";
-    color: #c1d1c6;
-}
-.key-block:after{
-    content: ": {";
-    color: #c1d1c6;
+h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 22px 0 6px;
 }
 
-.attribute:before,
-.attribute:after,
-.tech-p:before,
-.tech-p:after,
-.block-attribute:before,
-.block-attribute:after{
-    content: '"'
-}
-a:hover{
-    color: #5c4b9d;
+p {
+    margin: 0 0 14px;
 }
 
-.json-item:last-child{
-    margin-top: 1rem;
+strong {
+    font-weight: 600;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #d8d4c8;
+    margin: 0;
+}
+
+a {
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+}
+
+a:hover {
+    color: #5a5a5a;
+}
+
+.meta {
+    color: #7a7569;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin: 6px 0;
 }
